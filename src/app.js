@@ -13,7 +13,7 @@ const config = {
         fps: 60,
         gravity: {y : 0},
       }
-    },
+    }
   };
   
   export const  game = new Phaser.Game(config);
