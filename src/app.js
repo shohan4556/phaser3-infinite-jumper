@@ -1,6 +1,6 @@
 import Phaser from 'phaser'
 import imageUrl from "./public/sprites/card_hearts_A.png";
-
+import Game from './scenes/Game';
 
 const config = {
     width: 800,

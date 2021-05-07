@@ -25,7 +25,7 @@
     "sharp": "^0.28.1"
   },
   "parcelCleanPaths": [
-    "dist"
+    "dist", "build"
   ],
   "staticFiles": {
     "staticPath": "src/public",
