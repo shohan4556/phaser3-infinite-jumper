@@ -2,10 +2,9 @@
   "name": "parcel-phaser-template",
   "version": "1.0.0",
   "description": "",
-  "main": "app.js",
   "scripts": {
     "start": "parcel serve src/index.html -p 3000",
-    "build": "parcel build src/index.html --out-dir build",
+    "build": "parcel build src/index.html --out-dir build --public-url ./ --no-source-maps",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [
@@ -22,13 +21,14 @@
     "@babel/core": "^7.14.0",
     "parcel-bundler": "^1.12.5",
     "parcel-plugin-clean-easy": "^1.0.2",
-    "parcel-plugin-static-files-copy": "^2.6.0"
+    "parcel-plugin-static-files-copy": "^2.6.0",
+    "sharp": "^0.28.1"
   },
   "parcelCleanPaths": [
-		"build"
-	],
-	"staticFiles": {
-		"staticPath": "src/public",
-		"watcherGlob": "**"
-	}
+    "dist"
+  ],
+  "staticFiles": {
+    "staticPath": "src/public",
+    "watcherGlob": "**"
+  }
 }
