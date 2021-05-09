@@ -1,10 +1,10 @@
 import Phaser from 'phaser'
-import imageUrl from "./public/sprites/card_hearts_A.png";
 import Game from './scenes/Game';
+import { GameOver_Scene } from './Scripts/GameOver';
 
 const config = {
-    width: 800,
-    height: 600,
+    width: 480,
+    height: 640,
     type: Phaser.AUTO,
     audio: {
       disableWebAudio: true
@@ -13,24 +13,26 @@ const config = {
       default: 'arcade',
       arcade: {
         fps: 60,
-        gravity: {y : 0},
-      }
+        gravity: {y : 500},
+        debug:true
+      },
     },
-    scene: {
-      preload: preload,
-      create: create
-    }
+    scene: [Game, GameOver_Scene]
   };
   
-  export const  game = new Phaser.Game(config);
+
+  const mygame = new Phaser.Game(config);
 
 
-  function preload(){
-    this.load.image('card', imageUrl);
-    //this.load.image('sky', 'http://labs.phaser.io/assets/skies/space3.png');
-  }
 
-  function create(){
-    this.add.image(300,300, 'card');
-  }
+  // function preload(){
+  //    console.log(banana.color);
+
+  //   //this.load.image('card', imageUrl);
+  //   //this.load.image('sky', 'http://labs.phaser.io/assets/skies/space3.png');
+  // }
+
+  // function create(){
+  //   this.add.image(300,300, 'card');
+  // }
   

@@ -15,7 +15,8 @@
   "author": "",
   "license": "MIT",
   "dependencies": {
-    "phaser": "^3.54.0"
+    "phaser": "^3.54.0",
+    "public": "^0.1.5"
   },
   "devDependencies": {
     "@babel/core": "^7.14.0",
@@ -25,7 +26,8 @@
     "sharp": "^0.28.1"
   },
   "parcelCleanPaths": [
-    "dist", "build"
+    "dist",
+    "build"
   ],
   "staticFiles": {
     "staticPath": "src/public",
